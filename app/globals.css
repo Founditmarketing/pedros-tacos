@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------------
+   Pedro's - "El Codex de Oaxaca" editorial art direction
+   A fashion-magazine treatment: Bodoni Moda Didone display + Hanken Grotesk,
+   warm bone canvas, green-black ink, structural agave, locked terracotta accent,
+   one immersive charcoal section. Sharp print-grade hairlines, no pills.
+---------------------------------------------------------------------------- */
+@theme {
+  --color-bg: #f4f0e6;
+  --color-surface: #fbf8f0;
+  --color-ink: #1c2620;
+  --color-ink-soft: #5a6660;
+  --color-agave: #2e4034;
+  --color-green: #3f7d44;
+  --color-teal: #1f7a82;
+  --color-terracotta: #b6492b;
+  --color-terracotta-deep: #9a3a20;
+  --color-charcoal: #181613;
+  --color-line: #d8d2c4;
+  --color-on-dark: #ede7d8;
+  --color-on-dark-soft: #9aa59c;
+
+  --font-display: var(--font-bodoni), Georgia, serif;
+  --font-sans: var(--font-hanken), system-ui, sans-serif;
+
+  --radius-card: 4px;
+  --radius-frame: 8px;
+
+  --shadow-lift: 0 26px 60px -28px rgba(24, 22, 19, 0.45);
+  --shadow-soft: 0 14px 36px -22px rgba(24, 22, 19, 0.35);
+}
+
+:root {
+  color-scheme: light;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-terracotta);
+    color: var(--color-on-dark);
+  }
+
+  /* Bodoni Moda display - mixed case, never below 28px (set small text in Hanken) */
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  /* Visible keyboard focus across the bone + charcoal themes */
+  :where(a, button, [role="tab"], input, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-terracotta);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .bg-charcoal :where(a, button, [role="tab"]):focus-visible,
+  .text-on-dark :where(a, button, [role="tab"]):focus-visible {
+    outline-color: var(--color-on-dark);
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    max-width: 78rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .wrap { padding-inline: 2.5rem; }
+  }
+  .wrap-wide {
+    width: 100%;
+    max-width: 90rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .wrap-wide { padding-inline: 2.5rem; }
+  }
+
+  /* Buttons - 8px radius, no pills. Accent is action-only. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: var(--radius-frame);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    line-height: 1;
+    padding: 0.95rem 1.5rem;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.25s ease, transform 0.2s ease;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background-color: var(--color-terracotta);
+    color: var(--color-on-dark);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-terracotta-deep);
+    box-shadow: var(--shadow-soft);
+  }
+  .btn .btn-arrow { transition: transform 0.2s ease; }
+  .btn:hover .btn-arrow { transform: translateX(4px); }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--color-ink);
+    border: 1px solid var(--color-line);
+  }
+  .btn-ghost:hover {
+    border-color: var(--color-terracotta);
+    color: var(--color-terracotta);
+  }
+
+  .btn-on-dark {
+    background-color: var(--color-terracotta);
+    color: var(--color-on-dark);
+  }
+  .btn-on-dark:hover { background-color: var(--color-terracotta-deep); box-shadow: var(--shadow-soft); }
+
+  /* Eyebrow / kicker - rationed (max 2 per page). Hanken uppercase. */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    color: var(--color-ink-soft);
+  }
+
+  /* Oversized Bodoni-italic section numeral (replaces per-section eyebrows) */
+  .numeral {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-agave);
+    line-height: 0.8;
+    letter-spacing: -0.02em;
+  }
+
+  /* Small editorial "plate" tag */
+  .plate-tag {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.66rem;
+    color: var(--color-ink-soft);
+  }
+
+  /* Minimalist underline-slide for nav + inline links */
+  .link-slide {
+    position: relative;
+    color: inherit;
+  }
+  .link-slide::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-terracotta);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.26s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link-slide:hover::after,
+  .link-slide:focus-visible::after,
+  .link-slide[data-active="true"]::after {
+    transform: scaleX(1);
+  }
+  .link-slide[data-active="true"]::after { transform-origin: left; }
+
+  .tabular { font-variant-numeric: tabular-nums; }
+
+  .hairline { background-color: var(--color-line); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
