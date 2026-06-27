@@ -51,7 +51,7 @@ export const site = {
   // 360-degree CloudPano virtual tour from the original site (data-short)
   tourShort: "GjB0LyjDB",
 
-  url: "https://pedrostacosalexandria.com",
+  url: "https://www.pedrosalexandria.com",
 } as const;
 
 export const nav = [

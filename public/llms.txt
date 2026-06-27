@@ -7,7 +7,7 @@
 - **Name:** Pedro's Tacos & Tequila Bar
 - **Address:** 3024 N MacArthur Dr., Alexandria, LA 71303
 - **Phone:** (318) 427-7755
-- **Website:** https://pedrostacosalexandria.com
+- **Website:** https://www.pedrosalexandria.com
 - **Facebook:** https://www.facebook.com/pedrostacosalexandria
 
 ## Hours
@@ -18,11 +18,11 @@
 
 ## Pages
 
-- [Home](https://pedrostacosalexandria.com/) — Welcome, hero, featured dishes, and quick info
-- [Menu](https://pedrostacosalexandria.com/menu) — Full food and drink menu
-- [About](https://pedrostacosalexandria.com/about) — Story, atmosphere, and team
-- [Visit](https://pedrostacosalexandria.com/visit) — Location, hours, directions, and virtual tour
+- [Home](https://www.pedrosalexandria.com/) — Welcome, hero, featured dishes, and quick info
+- [Menu](https://www.pedrosalexandria.com/menu) — Full food and drink menu
+- [About](https://www.pedrosalexandria.com/about) — Story, atmosphere, and team
+- [Visit](https://www.pedrosalexandria.com/visit) — Location, hours, directions, and virtual tour
 
 ## Sitemap
 
-https://pedrostacosalexandria.com/sitemap.xml
+https://www.pedrosalexandria.com/sitemap.xml
