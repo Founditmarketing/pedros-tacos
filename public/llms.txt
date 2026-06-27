@@ -1,0 +1,28 @@
+# Pedro's Tacos & Tequila Bar
+
+> A multi-sensational Mexican kitchen and tequila bar in Alexandria, Louisiana. Modern Mexican cooking, fresh-squeezed margaritas, and service where everyone remembers your name.
+
+## Business Information
+
+- **Name:** Pedro's Tacos & Tequila Bar
+- **Address:** 3024 N MacArthur Dr., Alexandria, LA 71303
+- **Phone:** (318) 427-7755
+- **Website:** https://pedrostacosalexandria.com
+- **Facebook:** https://www.facebook.com/pedrostacosalexandria
+
+## Hours
+
+- Monday – Thursday: 10:30am – 10:00pm
+- Friday – Saturday: 10:30am – 11:00pm
+- Sunday: 10:30am – 10:00pm
+
+## Pages
+
+- [Home](https://pedrostacosalexandria.com/) — Welcome, hero, featured dishes, and quick info
+- [Menu](https://pedrostacosalexandria.com/menu) — Full food and drink menu
+- [About](https://pedrostacosalexandria.com/about) — Story, atmosphere, and team
+- [Visit](https://pedrostacosalexandria.com/visit) — Location, hours, directions, and virtual tour
+
+## Sitemap
+
+https://pedrostacosalexandria.com/sitemap.xml
