@@ -21,21 +21,12 @@ export function FeatureRail() {
               />
             </div>
 
-            <div className="mt-5 flex items-baseline justify-between gap-4 border-b border-line pb-4">
+            <div className="mt-5 border-b border-line pb-4">
               <h3 className="font-display text-3xl leading-[1.05] text-ink md:text-[2.1rem]">
                 <span className="bg-gradient-to-r from-terracotta to-terracotta bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 transition-[background-size] duration-300 lg:group-hover:bg-[length:100%_2px]">
                   {f.name}
                 </span>
               </h3>
-              {f.price ? (
-                <span className="tabular shrink-0 text-lg font-semibold text-terracotta-deep">
-                  ${f.price}
-                </span>
-              ) : (
-                <span className="shrink-0 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">
-                  Ask your server
-                </span>
-              )}
             </div>
             <p className="mt-3 text-[0.95rem] leading-relaxed text-ink-soft">{f.desc}</p>
           </article>

@@ -23,7 +23,7 @@ export default function MenuPage() {
           <MenuTabs groups={menu} />
 
           <p className="mx-auto mt-14 max-w-2xl text-center text-sm text-ink-soft">
-            Menu and pricing may change. For the latest, call us at{" "}
+            Menu items may change. For the latest, call us at{" "}
             <a
               href={site.phoneHref}
               className="font-semibold text-terracotta-deep underline underline-offset-2"

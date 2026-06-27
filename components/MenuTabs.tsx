@@ -7,7 +7,6 @@ import type { MenuGroup, MenuCategory } from "@/lib/menu";
 function RowItem({
   name,
   desc,
-  price,
   options,
 }: {
   name: string;
@@ -17,17 +16,13 @@ function RowItem({
 }) {
   return (
     <li className="py-5">
-      <div className="flex flex-col gap-0.5 md:flex-row md:items-baseline md:gap-3">
-        <h4 className="font-display text-[1.75rem] leading-[1.05] text-ink md:text-[1.875rem]">{name}</h4>
-        <span className="mb-2 hidden flex-1 border-b border-dotted border-agave/60 md:block" aria-hidden />
-        {price && <span className="tabular text-lg font-semibold text-terracotta-deep">${price}</span>}
-      </div>
+      <h4 className="font-display text-[1.75rem] leading-[1.05] text-ink md:text-[1.875rem]">{name}</h4>
       {desc && <p className="mt-2 max-w-2xl text-[0.95rem] leading-relaxed text-ink-soft">{desc}</p>}
       {options && (
         <ul className="mt-2.5 flex flex-wrap gap-x-6 gap-y-1.5 text-sm">
           {options.map((o) => (
             <li key={o.label} className="text-ink-soft">
-              {o.label} <span className="tabular font-semibold text-terracotta-deep">${o.price}</span>
+              {o.label}
             </li>
           ))}
         </ul>
